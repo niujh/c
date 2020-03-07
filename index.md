@@ -9,11 +9,13 @@ title: C语言课程
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="/c{{ post.url }}">{{ post.title }} {{ post.tags }}</a>
+      <h2><a href="/c{{ post.url }}">{{ post.title }} {{ post.tags }}</a></h2>
     </li>
   {% endfor %}
 </ul>
 
-{% for post in site.posts %}
-    <h2><a href="/c{{ post.url }}"> {{ post.title }}</a></h2>
-{% endfor %}
+<ul>
+  {% for post in site.posts %}
+      <h2><a href="/c{{ post.url }}"> {{ post.title }}</a></h2>
+  {% endfor %}
+</ul>
