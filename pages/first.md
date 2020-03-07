@@ -226,13 +226,17 @@ for(expr1; expr2; expr3)
 ```flow
 st=>start: begin
 en=>end: end
-op=>operation: process
-cond=>condition: Yes or No?
+expr1=>operation: expr1
+expr2=>condition: expr2
+expr3=>operation: expr3
+statement=>operation: statement
 
-st->op->cond
-cond(yes)->en
-cond(no)->op
+st->expr1->expr2
+expr2(no)->en
+expr2(yes)->statement->expr3
+expr3->expr2
+```
 
-    
 ## 二、PTA习题讲解
+
 ## 三、在线答疑
