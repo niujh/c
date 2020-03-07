@@ -9,8 +9,8 @@ title: C语言课程
 
 <ul>
   {% for post in site.posts %}
-    {% if post.tags contains 'pta' %}
-        <h2> :point_right: <a href="/c{{ post.url }}"> {{ post.title }}{{ post.tags }}</a></h2>
+    {% if post.tags contains 'Clang' %}
+        <h2> :point_right: <a href="/c{{ post.url }}"> {{ post.title }}</a></h2>
     {% endif %}
   {% endfor %}
 </ul>
@@ -19,7 +19,7 @@ title: C语言课程
 
 <ul>
   {% for post in site.posts %}
-    {% if post.tags contains 'pta' %}
+    {% if post.tags contains 'PTA' %}
         <h2> :point_right: <a href="/c{{ post.url }}"> {{ post.title }}{{ post.layout }}</a></h2>
     {% endif %}
   {% endfor %}
