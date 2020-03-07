@@ -2,7 +2,7 @@ theme: jekyll-theme-cayman
 
 gem "github-pages", group: :jekyll_plugins
 
-title: C语言课程
+title: ['C语言课程']
 
 description: 知识点
 
