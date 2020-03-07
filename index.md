@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Posts
+title: C语言课程
 ---
 
 
 ## Clang
 
 {% for post in site.posts %}
-    <a href="{{ post.url }}"> :point_right: {{ post.title }}</a>
+    <h2><a href="{{ post.url }}"> :point_right: {{ post.title }}</a></h2>
 {% endfor %}
