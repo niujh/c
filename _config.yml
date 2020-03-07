@@ -7,3 +7,25 @@ description: 知识点1
 # show_downloads: ["true"]
 # google_analytics: [Your Google Analytics tracking ID]
 
+defaults:
+  - 
+    scope:
+      path: ""
+      type: "posts"  # pages ， posts ， drafts
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "projects"
+      type: "pages"   # 以前的 `page`， 在 Jekyll 2.2 里。
+    values:
+      layout: "project" # 覆盖之前的默认布局
+      author: "niu"
+    
+      
+
+plugins:
+  - jemoji
+
+
+
