@@ -6,16 +6,19 @@ title: C语言课程
 
 ## Clang
 
+
 <ul>
   {% for post in site.posts %}
-    <li>
-      <h2><a href="/c{{ post.url }}">{{ post.title }} {{ post.tags }}</a></h2>
-    </li>
+      {% if post.tag==c %}
+        <h2> :point_right: <a href="/c{{ post.url }}"> {{ post.title }}</a></h2>
+      {% endif %}
   {% endfor %}
 </ul>
 
 <ul>
   {% for post in site.posts %}
-      <h2><a href="/c{{ post.url }}"> {{ post.title }}</a></h2>
+      {% if "post.tag=='pta'" %}
+        <h2> :point_right: <a href="/c{{ post.url }}"> {{ post.title }}</a></h2>
+      {% endif %}
   {% endfor %}
 </ul>
