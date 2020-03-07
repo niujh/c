@@ -9,7 +9,7 @@ title: C语言课程
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="/c{{ post.url }}">{{ post.title }}</a>
+      <a href="/c{{ post.url }}">{{ post.title }} {{ post.tags }}</a>
     </li>
   {% endfor %}
 </ul>
