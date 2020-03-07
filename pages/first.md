@@ -208,6 +208,8 @@ cond(no)->op
 
 #### 1.3.1 for 循环
 
+一般形式
+
 ```c
 for(expr1; expr2; expr3)
 {
@@ -236,6 +238,109 @@ expr2(no)->en
 expr2(yes)->statement->expr3
 expr3->expr2
 ```
+
+for 常用于确定次数的循环
+
+```c
+#include<stdio.h>
+
+int main()
+{
+    int n, x, sum=0;
+    scanf("%d", n);
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d", &x);
+        sum += x;
+    }
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+```
+
+#### 1.3.2 while 循环
+
+一般形式
+
+```c
+while(expr)
+{
+    statement;
+}
+```
+
+```flow
+st=>start: begin
+end=>end: end
+expr=>condition: expr
+statement=>operation: statement
+
+st->expr
+expr(yes)->statement->expr
+expr(no)->end
+```
+
+```c
+#include<stdio.h>
+
+int main()
+{
+    int x, sum=0;
+    scanf("%d", &x);
+    while(x>=0)
+    {
+        sum += x;
+        scanf("%d", &x);
+    }
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+```
+
+#### 1.3.2 do-while 循环
+
+一般形式
+
+```c
+do{
+    statement;
+}
+while(expr);
+```
+
+```flow
+st=>start: begin
+end=>end: end
+expr=>condition: expr
+statement=>operation: statement
+
+st->statement->expr
+expr(yes)->statement
+expr(no)->end
+```
+
+```c
+#include<stdio.h>
+
+int main()
+{
+    int x, sum=0;
+
+    do{
+        scanf("%d", &x);
+        sum += x;
+    }
+    while(x>=0);
+    sum -= x;
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+```
+
 
 ## 二、PTA习题讲解
 
