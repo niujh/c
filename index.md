@@ -8,8 +8,10 @@ title: C语言课程
 
 
 <ul>
-  {% for post in site.posts | where_exp:"item", "item.tags contains 'c'" %}
+  {% for post in site.posts %}
+    {% if post.tags contains 'pta' %}
         <h2> :point_right: <a href="/c{{ post.url }}"> {{ post.title }}{{ post.tags }}</a></h2>
+    {% endif %}
   {% endfor %}
 </ul>
 
@@ -22,3 +24,15 @@ title: C语言课程
     {% endif %}
   {% endfor %}
 </ul>
+
+{% for tags in ['Clang', 'PTA'] %}
+  <h2> {{ tags }}</h2>
+  ## {{ tags }}
+  <ul>
+    {% for post in site.posts %}
+      {% if post.tags contains tags' %}
+          <h2> :point_right: <a href="/c{{ post.url }}"> {{ post.title }}{{ post.layout }}</a></h2>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}
