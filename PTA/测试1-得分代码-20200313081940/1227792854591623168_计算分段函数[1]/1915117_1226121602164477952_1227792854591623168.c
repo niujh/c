@@ -1,0 +1,14 @@
+int main()
+{
+    float x,y;
+    scanf("%f",&x);
+    if(x != 0)
+    {
+        y=1/x;
+    }
+    else 
+    {
+        y=x;
+    }
+    printf("f(%.1f) = %.1f",x,y);
+}
